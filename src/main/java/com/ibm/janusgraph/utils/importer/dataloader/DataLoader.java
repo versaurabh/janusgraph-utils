@@ -73,7 +73,7 @@ public class DataLoader {
 
         Iterator<String> keysIter = nodeMap.keys();
 
-        int availProcessors = Config.getConfig().getWorkers();
+        int availProcessors = 8;
         try (WorkerPool workers = new WorkerPool(availProcessors, availProcessors * 2)) {
             while (keysIter.hasNext()) {
                 String fileName = keysIter.next();

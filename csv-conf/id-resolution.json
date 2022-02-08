@@ -1,0 +1,47 @@
+{
+  "VertexTypes": [
+    {
+      "name": "node",
+      "columns": {
+        "idValue": {
+          "dataType": "String",
+          "composit": true
+        },
+        "idType": {
+          "dataType": "String",
+          "composit": true
+        },
+        "createDate": {
+          "dataType": "Date",
+          "composit": false
+        }
+      },
+      "row": 50
+    }
+  ],
+  "EdgeTypes": [
+    {
+      "name": "link",
+      "multiplicity": "SIMPLE",
+      "selfRef": false,
+      "columns": {
+        "createDate": {
+          "dataType": "Date",
+          "composit": false
+        }
+      },
+      "relations": [
+        {
+          "left": "node",
+          "right": "node",
+          "row": 100,
+          "selfRef": false,
+          "supernode": {
+            "vertices": 1,
+            "edges": 5
+          }
+        }
+      ]
+    }
+  ]
+}
